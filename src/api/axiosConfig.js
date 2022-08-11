@@ -1,38 +1,35 @@
 import axios from "axios";
-import "query-string"
-import {
-    stringify
-} from "query-string";
+import "query-string";
+import { stringify } from "query-string";
 
 import apiConfig from "./apiconfig";
 
 const axiosClient = axios.create({
-    baseURL: apiConfig.baseURL,
-    headers: {
-        'Content-type': 'application/json'
-    },
-    paramsSerializer: params => stringify({
-        ...params,
-        api_key: apiConfig.apiKey
-    })
-})
+  baseURL: apiConfig.baseURL,
+  headers: {
+    "Content-type": "application/json",
+  },
+  paramsSerializer: (params) =>
+    stringify({
+      ...params,
+      api_key: apiConfig.apiKey,
+    }),
+});
 
-axiosClient.interceptors.request.use(async (config) => config)
+axiosClient.interceptors.request.use(async (config) => config);
 
-axiosClient.interceptors.response.use(response => {
+axiosClient.interceptors.response.use(
+  (response) => {
     if (response && response.data) {
-        return response.data
+      return response.data;
     }
 
-    return response
-}, (error) => {
-    console.log(error)
+    return response;
+  },
+  (error) => {
+    console.log(error);
     throw error;
-})
-// chnages in branch 2
-// some code in branch 1
-// more changes
-// change 4
-
+  }
+);
 
 export default axiosClient;

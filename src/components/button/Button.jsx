@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactPropTypes } from "react";
+import PropTypes from "prop-types";
 import "./Button.scss";
 
 const Button = (props) => {
@@ -24,8 +24,8 @@ const OutlineButton = (props) => {
   );
 };
 
-Button.ReactPropTypes = {
-  onClick: ReactPropTypes.func,
+Button.propTypes = {
+  onClick: PropTypes.func,
 };
 
 export default Button;

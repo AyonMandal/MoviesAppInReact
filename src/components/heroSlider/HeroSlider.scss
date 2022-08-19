@@ -80,6 +80,7 @@
       flex: 1;
       @include flex(center, flex-start);
       position: relative;
+      margin-left: 6rem;
 
       img {
         width: 400px;

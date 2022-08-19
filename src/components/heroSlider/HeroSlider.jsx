@@ -43,7 +43,7 @@ const HeroSlider = () => {
         spaceBetween={0}
         slidesPerView={1}
         pagination={true}
-        autoplay={{ delay: 8000 }}
+        autoplay={{ delay: 5000 }}
       >
         {movieList.map((item, i) => (
           <SwiperSlide key={i}>
@@ -111,7 +111,9 @@ const HeroSlideItem = (props) => {
             <Button onClick={() => navigate("/movie/" + item.id)}>
               Watch Now
             </Button>
-            <OutlineButton onClick={setModalActive}>Watch Later</OutlineButton>
+            <OutlineButton onClick={setModalActive}>
+              Watch Trailer
+            </OutlineButton>
           </div>
         </div>
         <div className="hero-slide__item__content__poster">

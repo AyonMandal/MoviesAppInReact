@@ -7,17 +7,17 @@ export const category = {
 
 export const movieType = {
   upcoming: "upcoming",
-  "top rated": "top_rated",
+  top_rated: "top_rated",
   popular: "popular",
-  "now playing": "now_playing",
+  now_playing: "now_playing",
   latest: "latest",
 };
 
 export const tvShowType = {
-  "top rated": "top_rated",
+  top_rated: "top_rated",
   popular: "popular",
-  "on the air": "on_the_air",
-  "airing today": "airing_today",
+  on_the_air: "on_the_air",
+  airing_today: "airing_today",
   latest: "latest",
 };
 

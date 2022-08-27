@@ -33,6 +33,7 @@
   &.shrink {
     height: $header-shrink-height;
     background-color: $body-bg;
+    box-shadow: 0 10px 6px -6px #777;
   }
 
   &__wrap {

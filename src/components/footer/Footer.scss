@@ -1,0 +1,46 @@
+@use "../../scss/" as *;
+
+.footer {
+  position: relative;
+  padding: 4rem 6rem;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &_content {
+    max-width: 1600px;
+
+    &_logo {
+      @include flex(center, center);
+      margin-bottom: 2rem;
+    }
+
+    &_menus {
+      display: flex;
+      justify-content: space-between;
+
+      @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &_menu {
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      margin-top: 1rem;
+
+      font-size: 1.25rem;
+      font-weight: 500;
+
+      & > * ~ * {
+        margin-top: 1rem;
+      }
+
+      & > * :hover {
+        animation: pulse;
+        animation-duration: 0.5s;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}

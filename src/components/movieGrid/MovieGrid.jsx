@@ -34,7 +34,6 @@ const MovieGrid = (props) => {
             break;
         }
       } else {
-        console.log("I am here");
         const params = {
           query: keyword,
         };
@@ -76,7 +75,7 @@ const MovieGrid = (props) => {
         page: CurrentPage + 1,
       };
 
-      response = await tmdbAPI.getSearchContent(Category, params);
+      response = await tmdbAPI.getSearchContent(Category, { params });
     }
     console.log(response);
     setItems([...Items, ...response.results]);

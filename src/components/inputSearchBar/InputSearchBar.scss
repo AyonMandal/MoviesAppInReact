@@ -1,0 +1,29 @@
+@use "../../scss/variables" as *;
+
+.input_holder {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: $border-radius;
+  background-color: rgb(18, 18, 18);
+  padding: 0.2rem;
+  max-width: 30%;
+  margin-left: auto;
+}
+
+input {
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  color: $text-color;
+  font-family: $font-family;
+  margin-right: 0.5rem;
+  opacity: 1;
+  transition: all ease 0.3s;
+  border: none;
+  flex: 1;
+  background-color: transparent;
+  opacity: 1;
+}
+
+input:focus {
+  opacity: 0.7;
+}

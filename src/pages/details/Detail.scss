@@ -31,18 +31,19 @@
 
 .movie-content {
   @include flex(flex-start, flex-start);
-  max-width: 1260px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   margin-top: -25rem;
   position: relative;
   padding: 0 5rem;
 
+  @include tablet {
+    margin-top: -35rem;
+  }
+
   &__poster {
-    flex: 1;
-    @include tablet {
-      margin-top: -5rem;
-    }
+    flex: 0 0 auto;
 
     @include mobile {
       display: block;
@@ -50,17 +51,46 @@
     }
 
     img {
-      width: 30%;
+      width: 20rem;
       border-radius: $border-radius;
       box-shadow: $box-shadow;
+      margin-right: 4rem;
 
       @include tablet {
-        width: 35%;
+        width: 20rem;
       }
 
       @include mobile {
         width: 60%;
       }
+    }
+  }
+
+  &__info {
+    width: 80%;
+    & > * {
+      margin-bottom: 2rem;
+    }
+
+    &__title {
+      font-size: 4rem;
+      line-height: 1;
+      font-weight: normal;
+    }
+
+    &__genres {
+      & > * ~ * {
+        margin-left: 0.5rem;
+      }
+    }
+
+    &__genre {
+      padding: 0.5rem 1.5rem;
+      border: 2px solid #fff;
+      border-radius: $border-radius;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background-color: $body-bg;
     }
   }
 }

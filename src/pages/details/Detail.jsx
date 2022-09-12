@@ -36,6 +36,24 @@ const Detail = () => {
                 alt="Poster"
               />
             </div>
+            <div className="movie-content__info">
+              <h1 className="movie-content__info__title">
+                {contentDetail.title || contentDetail.name}
+              </h1>
+              <div className="movie-content__info__genres">
+                {contentDetail.genres &&
+                  contentDetail.genres.slice(0, 5).map((genre, i) => (
+                    <>
+                      <span className="movie-content__info__genre" key={i}>
+                        {genre.name}
+                      </span>
+                    </>
+                  ))}
+              </div>
+              <div className="movie-content__info__overview">
+                {contentDetail.overview}
+              </div>
+            </div>
           </div>
         </>
       )}

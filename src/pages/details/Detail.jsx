@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "./Detail.scss";
 import tmdbAPI from "../../api/tmdbApiConfig";
 import apiConfig from "../../api/apiConfig";
+import CastDetails from "../../components/castDetails/CastDetails";
 
 const Detail = () => {
   const { category, id } = useParams();
@@ -53,6 +54,7 @@ const Detail = () => {
               <div className="movie-content__info__overview">
                 {contentDetail.overview}
               </div>
+              <CastDetails category={category} id={id} />
             </div>
           </div>
         </>

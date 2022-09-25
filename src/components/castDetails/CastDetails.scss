@@ -1,0 +1,28 @@
+@use "../../scss/" as *;
+
+.castdetails__container {
+  display: flex;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.castdetail {
+  height: 70px;
+  width: 70px;
+  background-color: aliceblue;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+  &:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+
+  img {
+    display: inline;
+    margin: -10px auto 0 auto;
+    height: auto;
+    width: 100%;
+  }
+}

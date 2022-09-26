@@ -26,12 +26,15 @@ const CastDetails = (props) => {
       <div className="castdetails__container">
         {Casts.map((cast, i) => (
           <>
-            <div className="castdetail">
-              <img
-                src={apiConfig.w500Image(cast.profile_path)}
-                alt=""
-                className="castdetail__image"
-              />
+            <div className="castdetail__container">
+              <div className="castdetail">
+                <img
+                  src={apiConfig.w500Image(cast.profile_path)}
+                  alt=""
+                  className="castdetail__image"
+                />
+              </div>
+              <div className="castdetail__name">{cast.name.split(" ")[0]}</div>
             </div>
           </>
         ))}

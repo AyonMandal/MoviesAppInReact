@@ -2,21 +2,24 @@
 
 .castdetails__container {
   display: flex;
-  max-width: 100%;
+  max-width: 110%;
   overflow-x: scroll;
 }
 
 .castdetail {
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   background-color: aliceblue;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
-  margin-bottom: 1rem;
-  &:not(:last-of-type) {
-    margin-right: 1rem;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    height: 100px;
+    width: 100px;
   }
 
   img {
@@ -25,4 +28,28 @@
     height: auto;
     width: 100%;
   }
+
+  &__name {
+    font-size: 0.5rem;
+    text-align: center;
+  }
+
+  &:hover ~ &__name {
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+  }
+}
+
+.castdetail__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  flex-shrink: 0;
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+  transition: all 0.3s ease;
 }

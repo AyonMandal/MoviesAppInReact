@@ -23,6 +23,7 @@ const CastDetails = (props) => {
 
   return (
     <>
+      <div className="castdetails__heading">Casts & Crews</div>
       <div className="castdetails__container">
         {Casts.map((cast, i) => (
           <>
@@ -34,7 +35,10 @@ const CastDetails = (props) => {
                   className="castdetail__image"
                 />
               </div>
-              <div className="castdetail__name">{cast.name.split(" ")[0]}</div>
+              <div className="castdetail__profile">
+                <div className="castdetail__name">{cast.name}</div>
+                <div className="castdetail__role">{cast.character}</div>
+              </div>
             </div>
           </>
         ))}

@@ -2,8 +2,9 @@
 
 .castdetails__container {
   display: flex;
-  max-width: 110%;
+  max-width: 100%;
   overflow-x: scroll;
+  margin-bottom: 1rem;
 }
 
 .castdetail {
@@ -18,8 +19,14 @@
   transition: all 0.3s ease;
 
   &:hover {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
+    border-radius: 5%;
+    box-shadow: 8px 8px 5px -6px rgba(245, 235, 235, 0.48);
+  }
+
+  &:hover ~ .castdetail__profile {
+    display: flex;
   }
 
   img {
@@ -29,27 +36,38 @@
     width: 100%;
   }
 
-  &__name {
-    font-size: 0.5rem;
-    text-align: center;
+  &__profile {
+    display: none;
+    flex-direction: column;
+    margin-left: 10px;
   }
 
-  &:hover ~ &__name {
+  &__name {
     font-size: 1rem;
-    text-align: center;
-    display: block;
+    padding-bottom: 2px;
+  }
+
+  &__role {
+    font-size: 0.8rem;
+    color: gray;
   }
 }
 
 .castdetail__container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   align-content: center;
   flex-shrink: 0;
   &:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
   }
   transition: all 0.3s ease;
+}
+
+.castdetails__heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 5px;
 }

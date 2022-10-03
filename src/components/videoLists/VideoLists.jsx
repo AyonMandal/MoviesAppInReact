@@ -35,21 +35,22 @@ const Video = (props) => {
   const item = props.item;
   const iframeRef = useRef(null);
   useEffect(() => {
-    const height = (iframeRef.current.offsetWidth * 2) / 3 + "px";
+    const height = (iframeRef.current.offsetWidth * 9) / 16 + "px";
     iframeRef.current.setAttribute("height", height);
   }, []);
 
   return (
     <div className="video">
+      <div className="video__title">
+        <h2>{item.name}</h2>
+      </div>
+      <hr></hr>
       <iframe
         src={`https://www.youtube.com/embed/${item.key}`}
         ref={iframeRef}
         width="100%"
         title="video"
       ></iframe>
-      <div className="video__title">
-        <h2>{item.name}</h2>
-      </div>
     </div>
   );
 };
